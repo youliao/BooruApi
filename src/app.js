@@ -6,10 +6,10 @@ import konachan from "./routes/konachan.js";
 const app = Express();
 const port = 3000;
 
-app.use("/boorus/yandere",yandere);
-app.use("/boorus/danbooru",danbooru);
-app.use("/boorus/konachan",konachan);
+app.use("/boorus/yandere", yandere);
+app.use("/boorus/danbooru", danbooru);
+app.use("/boorus/konachan", konachan);
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`at http://localhost:${port}`);
 })
