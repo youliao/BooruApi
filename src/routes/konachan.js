@@ -1,5 +1,6 @@
-import Express from 'express';
+import Express from "express";
 import handlers from "./handlers.js";
+import "express-async-errors";
 
 const site = "konac";
 const router = Express.Router();
