@@ -1,5 +1,5 @@
 import Express from "express";
-import handlers from "./handlers.js";
+import * as handlers from "./handlers.js";
 import "express-async-errors";
 
 const site = "danbooru";
@@ -11,8 +11,12 @@ router.get("/posts/latest", handlers.getLatest(site));
 
 router.get("/posts/:id", handlers.getPost(site));
 
-router.get("/postlinks/:id", handlers.getPostLink(site));
+router.get("/postfileurls/:id", handlers.getPostFileUrlById(site));
 
-router.get("/postfiles/:id", handlers.getPostFile(site));
+router.get("/postfileurls", handlers.getPostFileUrlByObjectKey(site));
+
+router.get("/postfiles/:id", handlers.getPostFileById(site));
+
+router.get("/postfiles", handlers.getPostFileByObjectKey(site));
 
 export default router;
