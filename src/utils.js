@@ -9,11 +9,11 @@ const options = {
 const cache = new LRU(options);
 
 export function constructFileUrl(site, objectKey) {
-    if(!objectKey) throw "object-key can't be null!";
+    if(!objectKey) throw "Object key can't be null!";
     const domain = Booru.forSite(site).domain;
     const [md5] = objectKey.split(".");
   
-    if(md5.length != 32) throw "object-key must be md5!";
+    if(md5.length != 32) throw "Object key must be md5!";
     switch (domain) {
       case "yande.re":
         return `https://files.yande.re/image/${objectKey}`;
@@ -24,7 +24,7 @@ export function constructFileUrl(site, objectKey) {
       case "gelbooru.com":
         return `https://img3.gelbooru.com/images/${md5.substr(0, 2)}/${md5.substr(2, 2)}/${objectKey}`;     
       default:
-        throw `not supported for ${domain}`;
+        throw `Not supported for ${domain}`;
     }
   }
 

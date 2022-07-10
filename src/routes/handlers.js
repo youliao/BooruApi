@@ -41,7 +41,7 @@ export function getLatest(site){
     };
 }
 
-export function getPostFileUrlById(site){
+export function getPostFileLinkById(site){
     return async (req, res) => {
       const id = req.params.id;
 
@@ -52,9 +52,9 @@ export function getPostFileUrlById(site){
     };
 }
 
-export function getPostFileUrlByObjectKey(site){
+export function getPostFileLinkByObjectKey(site){
     return async (req, res) => {
-      const objectKey = req.query.object_key;
+      const objectKey = req.params.objectKey;
 
       try
       {
@@ -93,7 +93,7 @@ export function getPostFileById(site) {
 
 export function getPostFileByObjectKey(site){
     return async (req, res) => {
-      const objectKey = req.query.object_key;
+      const objectKey = req.params.objectKey;
       const url = Utils.constructFileUrl(site, objectKey);
 
       Fetch(url)
