@@ -10,10 +10,10 @@ const cache = new LRU(options);
 
 export function constructFileUrl(site, objectKey) {
     if(!objectKey) throw "Object key can't be null!";
+    
     const domain = Booru.forSite(site).domain;
     const [md5] = objectKey.split(".");
-  
-    if(md5.length != 32) throw "Object key must be md5!";
+
     switch (domain) {
       case "yande.re":
         return `https://files.yande.re/image/${objectKey}`;
