@@ -1,4 +1,4 @@
-import Booru from "booru";
+import Booru from "booru-dev";
 import Fetch from "node-fetch";
 import LRU from "lru-cache";
 

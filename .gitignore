@@ -1,0 +1,14 @@
+# Filter IDE settings
+.vs/*
+.vscode/
+.idea/
+
+# Filter node modules
+node_modules/*
+
+# Filter build
+dist/*
+.tsbuildinfo
+
+# MacOS
+.DS_Store
