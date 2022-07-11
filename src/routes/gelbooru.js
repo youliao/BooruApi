@@ -2,12 +2,8 @@ import Express from "express";
 import * as handlers from "./handlers.js";
 import "express-async-errors";
 
-const site = "konac";
+const site = "gelbooru";
 const router = Express.Router();
-
-router.get("/posts", handlers.getPosts(site));
-
-router.get("/posts/latest", handlers.getLatest(site));
 
 router.get("/posts/:id(\\d+)", handlers.getPost(site));
 
