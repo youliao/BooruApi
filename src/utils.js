@@ -1,4 +1,4 @@
-import Booru from "booru-dev";
+import Booru from "booru";
 import LRU from "lru-cache";
 
 const options = {
