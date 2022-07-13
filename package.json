@@ -1,6 +1,5 @@
 {
   "type": "module",
-  "name": "BooruApi",
   "version": "1.0.0",
   "main": "app.js",
   "license": "MIT",
